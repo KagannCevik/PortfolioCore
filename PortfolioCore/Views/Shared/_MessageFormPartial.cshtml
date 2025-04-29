@@ -1,0 +1,26 @@
+﻿@model PortfolioCore.Entities.Message
+
+<form asp-action="CreateMessage" asp-controller="MessageController" method="post" class="contact-form">
+
+    <div class="row gy-4">
+        <div class="col-md-6">
+            <input type="text" asp-for="NameSurname" class="form-control" placeholder="Ad - Soyad" required />
+        </div>
+
+        <div class="col-md-6">
+            <input type="email" asp-for="Email" class="form-control" placeholder="Email" required />
+        </div>
+
+        <div class="col-md-12">
+            <input type="text" asp-for="Subject" class="form-control" placeholder="Konu" required />
+        </div>
+
+        <div class="col-md-12">
+            <textarea asp-for="MessageDetail" rows="6" class="form-control" placeholder="Mesaj" required></textarea>
+        </div>
+
+        <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-success">Mesaj Gönder</button>
+        </div>
+    </div>
+</form>

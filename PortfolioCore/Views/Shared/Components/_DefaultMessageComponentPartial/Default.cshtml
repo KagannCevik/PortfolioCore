@@ -1,0 +1,45 @@
+﻿model PortfolioCore.Entities.Message
+
+@* @if (TempData["Success"] != null)
+{
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			Swal.fire({
+				icon: 'success',
+				title: '@Html.Raw(TempData["Success"])',
+				showConfirmButton: true
+			});
+		});
+	</script>
+} *@
+
+<div class="col-lg-8">
+	<form action="/Message/CreateMessage/" method="post" data-aos="fade-up" data-aos-delay="200">
+		
+		<div class="row gy-4">
+
+			<div class="col-md-6">
+				<input type="text" name="NameSurname" class="form-control" placeholder="Adınız Soyadınız" required="">
+			</div>
+
+			<div class="col-md-6 ">
+				<input type="Email" class="form-control" name="email" placeholder="Mail Adresiniz" required="">
+			</div>
+
+			<div class="col-md-12">
+				<input type="text" class="form-control" name="Subject" placeholder="Konu" required="">
+			</div>
+
+			<div class="col-md-12">
+				<textarea class="form-control" name="MessageDetail" rows="6" placeholder="Mesajınız" required=""></textarea>
+			</div>
+
+			<div class="col-md-12 text-center">
+
+				<button type="submit" class="btn btn-outline-primary">Mesajı Gönder</button>
+			</div>
+
+		</div>
+	</form>
+</div>

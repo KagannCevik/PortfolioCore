@@ -1,0 +1,52 @@
+﻿@model List<Contact>	
+<section id="contact" class="contact section">
+
+	<!-- Section Title -->
+	<div class="container section-title" data-aos="fade-up">
+		<h2>İletişim</h2>
+		<p>Aşağıda bulunan iletişim bilgileri aracılığı ile bana ulaşabilir veya direkt mesaj göndererek ulaşabilirsiniz.</p>
+	</div><!-- End Section Title -->
+
+	<div class="container" data-aos="fade" data-aos-delay="100">
+
+		<div class="row gy-4">
+			@foreach (var item in Model)
+			{
+				<div class="col-lg-4">
+					<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+						<i class="bi bi-geo-alt flex-shrink-0"></i>
+						<div>
+							<h3>Adres</h3>
+							<p>@item.Address</p>
+						</div>
+					</div><!-- End Info Item -->
+
+					<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+						<i class="bi bi-telephone flex-shrink-0"></i>
+						<div>
+							<h3>Telefon</h3>
+							<p>@item.PhoneNumber</p>
+						</div>
+					</div><!-- End Info Item -->
+
+					<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+						<i class="bi bi-envelope flex-shrink-0"></i>
+						<div>
+							<h3>Email Adresi</h3>
+							<p>@item.Email</p>
+						</div>
+					</div><!-- End Info Item -->
+
+				</div>
+			}
+			@await Component.InvokeAsync("_DefaultLocationComponentPartial")
+			
+			@await Html.PartialAsync("_MessageFormPartial", new PortfolioCore.Entities.Message())
+			
+			<!-- End Contact Form -->
+
+		</div>
+		
+	</div>
+
+</section>

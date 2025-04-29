@@ -1,0 +1,45 @@
+﻿@model List<Portfolio>
+@{
+    ViewData["Title"] = "ProjeList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<<div class="section">
+    <div class="container">
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6">
+                <h2 class="font-weight-bold text-primary heading">
+                    Projelerim
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="property-slider-wrap">
+                        <div class="property-slider">
+                            <div class="property-item">
+                                <a href="#" class="img">
+                                    <img src="@item.ImageUrl" alt="Image" class="img-fluid" />
+                                </a>
+                                <div class="property-content">
+                                    <div class="price mb-2"><span>@item.Title</span></div>
+                                    <div>
+                                        <span class="d-block mb-2 text-black-50">@item.Description</span>
+                                        <td><a href="/Proje/ProjeDelete/@item.PortfolioId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Proje/ProjeUpdate/@item.PortfolioId" class="btn btn-info">Güncelle</a></td>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+          
+        </div>
+    </div>
+   
+</div>
+<td><a href="/Proje/ProjeAdd" class="btn btn-success">Yeni Proje Oluştur </a></td>

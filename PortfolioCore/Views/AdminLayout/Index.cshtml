@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+@Html.Partial("/Views/AdminLayout/PartialHead.cshtml")
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+
+        @Html.Partial("/Views/AdminLayout/PartialSidebar.cshtml")
+
+        <div id="content" class="p-4 p-md-5 pt-5">
+            @RenderBody()
+        </div>
+    </div>
+
+    @Html.Partial("/Views/AdminLayout/PartialScript.cshtml")
+
+</body>
+</html>

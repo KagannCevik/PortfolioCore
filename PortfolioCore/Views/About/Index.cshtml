@@ -1,0 +1,41 @@
+﻿@model List<About>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Hakkımda Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Açıklama</th>
+        <th>Başlık</th>
+        <th>Başlık Açıklaması</th>
+        <th>Doğum Tarihi</th>
+        <th>Şehir</th>
+        <th>Yaş</th>
+        <th>Email</th>
+        <th>Resim Url</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AboutId</td>
+            <td>@item.Description</td>
+            <td>@item.Title</td>
+            <td>@item.TitleDescription</td>
+            <td>@item.BirthDay</td>
+            <td>@item.City</td>
+            <td>@item.Age</td>
+            <td>@item.Email</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/About/DeleteAbout/@item.AboutId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/About/CreateAbout/" class="btn btn-primary">Yeni Deneyim Girişi</a>
+

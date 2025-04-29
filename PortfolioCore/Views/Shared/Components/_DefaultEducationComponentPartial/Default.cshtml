@@ -1,0 +1,33 @@
+﻿@model List<Education>
+<section id="resume" class="resume section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Özgeçmiş</h2>
+        <p>
+            Karşılaştığım her zorluğun üstesinden gelmeyi başaran, çözüm odaklı bir yapıya sahibim. Sorumluluk almaktan çekinmem, iş süreçlerinde aktif rol üstlenirim. Ekip çalışmasına uyum sağlarken, gerektiğinde liderlik vasfımı da ön plana çıkarırım.
+            Hedef odaklı çalışır, karşıma çıkan engelleri kararlılıkla aşarım. İşimde detaylara önem vererek, her zaman en iyi sonucu elde etmeyi amaçlarım..
+        </p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+        <div class="row">
+            @foreach(var item in Model)
+            {
+                
+            <h3 class="resume-title">Eğitim Hayatım</h3>
+            <div class="resume-item">
+                <h4>@item.Title</h4>
+                <h5>@item.DateInfo</h5>
+                <p><em>@item.SubTitle</em></p>
+                <p>@item.Description</p>
+            </div><!-- Edn Resume Item -->
+            }
+        </div>
+
+        @await Component.InvokeAsync("_DefaultExperienceComponentPartial")
+
+    </div>
+
+</section>
