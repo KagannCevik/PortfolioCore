@@ -80,35 +80,6 @@ Kullanıcı, bu bölümde kendisine gönderilen mesajları görüntüleyebilir. 
 
 # 📊 Proje İstatistikleri
 
-## 1️⃣ Toplam Yetenek Sayısı
-Portföyde yer alan tüm yeteneklerin toplam sayısını belirtir.
-
-## 2️⃣ Toplam Yetenek Puanı
-Yeteneklerin toplam puan değerini gösterir, her bir yeteneğin seviyesini yansıtır.
-
-## 3️⃣ Değeri 70'den Büyük Olan Yetenek Sayısı
-Değeri 70'in üzerinde olan yeteneklerin sayısını ifade eder.
-
-## 4️⃣ Yeteneklerin Ortalama Değeri
-Portföydeki tüm yeteneklerin ortalama puanını gösterir.
-
-## 5️⃣ Deneyim Sayısı
-Portföyde yer alan deneyimlerin sayısını belirtir.
-
-## 6️⃣ Alt Başlığı Developer Sayısı
-Developer rolündeki pozisyonların sayısını gösterir.
-
-## 7️⃣ Toplam Mesaj Sayısı
-Portföyde alınan toplam mesaj sayısını ifade eder.
-
-## 8️⃣ Okunmayan Mesaj Sayısı
-Henüz okunmamış mesajların sayısını belirtir.
-
-## 9️⃣ Okunan Mesaj Sayısı
-Okunmuş ve yanıtlanmış mesajların sayısını ifade eder.
-
-## 🔟 Toplam Kategori Sayısı
-İçeriklerin kategorilere ayrıldığı toplam sayıyı gösterir.
 
 ![Image](https://github.com/user-attachments/assets/2ac40579-8294-4d9e-adda-606b04b2f00d)
 
